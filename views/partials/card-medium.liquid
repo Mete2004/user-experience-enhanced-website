@@ -1,0 +1,22 @@
+<div class="card-medium">
+
+    <div class="card-medium-outer-img">
+        <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}">
+    </div>
+    
+    <div class="card-medium-content">
+        <h2>{{ story.title }}</h2>
+
+        <h3>{{ story.intro }}</h3>
+
+        {% comment %} <p>{{ story.district }}</p> {% endcomment %}
+
+        <div class="card-medium-meta">
+            <p class="card-date">{{ story.date | date: "%d-%m-%Y"}}</p>
+            
+            <a href="/details/{{ story.id }}" class="card-medium-button read-more-button">
+                Lees meer 
+            </a>
+        </div>
+    </div>
+</div>

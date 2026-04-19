@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/styleguide.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="{{ pageClass }}"> 
+    <header>
+
+        {% render "partials/logo.liquid" extra_class: 'logo-header', 
+            mobile_logo: mobile_logo, 
+            desktop_logo: desktop_logo 
+        %}
+
+        <div class="outer-search">
+            <form method="GET" action="/">
+                <input type="text" name="search" placeholder="Zoek..." aria-label="Zoek">
+                <button type="submit"><img src="/assets/search-icon.svg"></button>
+            </form>
+        </div>
+        
+        <details>
+            <summary class="menu-button-outer">
+                <div class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+            </summary>
+
+            <nav class="mobile-nav">
+                <a href="/">Home</a>
+                <a href="/nieuw-west">Nieuw-west</a>
+                <a href="/zuidoost">Zuidoost</a>
+                <a href="/oost">Oost</a>
+            </nav>
+        </details>
+
+        <nav class="desktop-nav">
+             <a href="/" class="link-button">
+                <img src="/assets/logo-toren-home.svg" alt="Home">
+            </a>
+            <a href="nieuw-west" class="link-button">
+                <img src="/assets/logo-toren-nieuw-west.svg" alt="Nieuw-West">
+            </a>
+            <a href="zuidoost" class="link-button">
+                <img src="/assets/logo-toren-zuidoost.svg" alt="Zuidoost">
+            </a>
+            <a href="oost" class="link-button">
+                <img src="/assets/logo-toren-oost.svg" alt="Oost">
+            </a>
+        </nav>
+    </header>
+

@@ -1,0 +1,27 @@
+<article class="article">
+
+        <a href="javascript:history.back()" class="back-link">
+             Terug naar overzicht
+        </a>
+
+        {% for category in categories %}
+            {% if category.id == story.categories[0] %}
+                <p>{{ category.title }}</p>
+            {% endif %}
+        {% endfor %}
+
+        <h1 class="titel-detail">{{ story.title }}</h1>
+
+        <p>{{ story.intro }}</p>
+
+        <div class="div-date">
+            <p class="detail-date">{{ story.date | date: "%d-%m-%Y"}}</p>
+            <p class="label-district">{{ story.district }}</p>
+        </div>
+
+        <div class= "text-detail"> 
+            {{ story.body }}
+        </div>
+
+
+    </article>

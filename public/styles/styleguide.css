@@ -1,0 +1,56 @@
+/* Baseline: Widely Available */
+@font-face {
+  font-family: 'Buurtcampus-font';
+  src: url('/fonts/BuurtcampusArial-Bold.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Baseline: Widely Available */
+:root {
+  /* font */ /* Baseline: Widely Available */
+  --font-main: 'Buurtcampus-font', Arial, sans-serif;
+
+
+  /* color */ /* Baseline: Widely Available */
+  --bg-main: white;
+  --orange: #f6601a;
+  --main-dark-blue: #243d70;
+  --main-orange: #E4822D;
+  --main-light-blue: #0185a5;
+
+  /* text */ /* Baseline: Widely Available */
+  --text-xs: 13px;
+  --text-s: 14px;
+  --text-sm: 15px;
+  --text-m: 16px;
+  --text-ml: 18px;
+  --text-l: 20px;
+  --text-xl: 28px;
+
+  /* card */
+
+  /* titel */ /* Baseline: Widely Available */
+  --titel-big: 1.5rem;
+  --titel-medium: 1.3rem;
+  --titel-small: 1.1rem;
+  --titel-xs: 1rem;
+  --titel-xxs: 0.9rem;
+  --titel-xxxs: 0.8rem;
+
+  /* intro */ /* Baseline: Widely Available */
+  --intro-big-text: 0.85rem;
+  --intro-medium-text: 0.65rem;
+  --intro-small-text: 0.85rem;
+
+  --intro-weight: 400;
+
+  /* font-weight */ /* Baseline: Widely Available */
+  --font-weight-light: 100;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  
+}

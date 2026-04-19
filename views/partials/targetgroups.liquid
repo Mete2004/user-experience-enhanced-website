@@ -1,0 +1,34 @@
+
+<section class="section-targets">
+
+    <div class="targetgroups">
+
+        <a href="/{{ current_district }}" class="{% if not selectedTargetGroup %}active{% endif %}">
+            Alle
+        </a>
+
+        <a href="/{{ current_district }}?targetgroup=student" class="{% if selectedTargetGroup == 'student' %}active{% endif %}">
+            Studenten
+        </a>
+
+        <a href="/{{ current_district }}?targetgroup=wijkpartner" class="{% if selectedTargetGroup == 'wijkpartner' %}active{% endif %}">
+            Wijkpartners
+        </a>
+
+        <a href="/{{ current_district }}?targetgroup=wijkbewoner" class="{% if selectedTargetGroup == 'wijkbewoner' %}active{% endif %}">
+            Wijkbewoners
+        </a>
+
+        <a href="/{{ current_district | downcase }}?targetgroup=HvA medewerker" class="{% if selectedTargetGroup == 'HvA medewerker' %}active{% endif %}">
+            HvA medewerkers
+        </a>
+
+    </div>
+
+    {% if selectedTargetGroup %}
+        <p class="filter-info">  
+            {{ current_district }} ➝ {{ selectedTargetGroup }}
+        </p>
+    {% endif %}
+
+</section>

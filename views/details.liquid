@@ -1,0 +1,17 @@
+    {% assign mobile_logo = "/assets/logo-compact-home.svg" %}
+    {% assign desktop_logo = "/assets/logo-lang-home.svg" %}
+    
+    {% render 'partials/head.liquid',
+        mobile_logo: mobile_logo,
+        desktop_logo: desktop_logo
+    %}
+
+    <main class="main-details">
+        {% render 'partials/detail-content.liquid', story: story, categories: categories, showBack: true %}
+        {% render 'partials/comments.liquid', story: story, reacties: reacties, hasComments: hasComments, success: success, error: error %}
+    </main>
+
+    {% render 'partials/foot.liquid',
+        mobile_logo: mobile_logo,
+        desktop_logo: desktop_logo
+    %}

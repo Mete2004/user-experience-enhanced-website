@@ -1,0 +1,34 @@
+<div class="card-big">
+
+  <div class="card-big-first">
+    <div class="card-big-outer-img">
+      <div class="card-big-badge">Laatste nieuws</div>
+      <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}">
+    </div>
+  </div>
+  
+
+  <div class="card-big-second"> 
+    <div class="card-big-content">
+
+    <h2>{{ story.title }}</h2>
+
+    <h3>{{ story.intro }}</h3>
+
+  </div>
+
+  <div class="card-meta">
+      <div class="meta-left">
+        <p class="card-date">{{ story.date | date: "%d-%m-%Y"}}</p>
+
+        <p class="label-district">{{ story.district }}</p>
+      </div>
+
+      <a href="/details/{{ story.id }}" class="card-big-button read-more-button">
+        Lees meer
+      </a>
+    </div>
+  </div>
+  
+
+</div>

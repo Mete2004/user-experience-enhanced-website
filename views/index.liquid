@@ -1,0 +1,54 @@
+    {% assign mobile_logo = "/assets/logo-compact-home.svg" %}
+    {% assign desktop_logo = "/assets/logo-lang-home.svg" %}
+    
+    {% render 'partials/head.liquid',
+        pageClass: "home",
+        mobile_logo: mobile_logo,
+        desktop_logo: desktop_logo
+    %}
+
+    <main class="main-home">
+        <section class="section-home">
+    
+                {% if search %}
+                    <div class="info-results">
+                    {% if stories.size == 1 %}
+                        <h3>{{ stories.size }} resultaat voor "{{ search }}"</h3>
+                    {% else %}
+                        <h3>{{ stories.size }} resultaten voor "{{ search }}"</h3>
+                    {% endif %}
+                    </div>
+                {% endif %}
+            
+            <div class="card-algemeen">
+                
+                <div class="card-algemeen-big">
+                    {% for story in stories %}
+                    {% if forloop.first %}
+                        {% render 'partials/card-big.liquid', story: story %}
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                
+                <div class="card-algemeen-small">
+                    {% if search == blank %}
+                        <h3>Bekijk algemeen ➝</h3>
+                    {% elsif search and stories.size > 1 %}
+                        <h3>Bekijk meerdere artikelen ➝</h3>
+                    {% endif %}
+
+                    {% for story in stories %}
+                    {% unless forloop.first %}
+                        {% render 'partials/card-small.liquid', story: story %}
+                    {% endunless %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% render 'partials/foot.liquid',
+        mobile_logo: mobile_logo,
+        desktop_logo: desktop_logo
+    %}

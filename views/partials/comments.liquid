@@ -1,0 +1,64 @@
+<section class="comments-section">
+
+    {% if success %}
+        <div class="success-message-outer">
+            <p class="success-message">Je reactie is geplaatst!</p>
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error-message-outer">
+            <p class="error-message">Er ging iets mis. Probeer het opnieuw</p>
+        </div>
+    {% endif %}
+
+    <section class="section-form">
+
+        <h2 class="form-titel">Laat een reactie achter!</h2>
+
+        <div class="outer-form">
+            <form class="reactie-form" method="POST" action="/reacties">
+                <div class="form-name">
+                    <label for="name">Naam:</label>
+                    <input class="input-name" type="text" id="name" name="name" placeholder="Jouw naam" required>
+                </div>
+                <div class="form-comment">
+                    <label for="comment">Bericht:</label>
+                    <textarea class="input-comment" id="message" name="comment" placeholder="Typ hier je reactie..."  required></textarea>
+                </div>
+                {% comment %} koppel aan nieuwsbericht {% endcomment %}
+                <input type="hidden" name="story_id" value="{{ story.id }}">
+
+                <button class="form-button" type="submit">Reageer</button>
+
+            </form>
+        </div>
+
+    </section>
+
+    <section class="section-list">
+
+        <h2 class="comments-titel">Reacties</h2>
+
+        <div class="outer-comments">
+
+            {% if hasComments == false %}
+                <div class="comments-empty">
+                    <p class="empty-text">Er zijn nog geen reacties.</p>
+                </div>
+            {% endif %}
+
+            {% if hasComments %}
+                {% for reactie in reacties %}
+                <div class="comment">
+                    <p class="comment-name">{{ reactie.name }}</p>
+                    <p class="comment-text">{{ reactie.comment }}</p>
+                    <p class="comment-date">{{ reactie.date_created | date:"%d %B %Y" }}</p>
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+    </section>
+
+</section>
