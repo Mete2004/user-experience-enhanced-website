@@ -17,7 +17,7 @@
         <h2 class="form-titel">Laat een reactie achter!</h2>
 
         <div class="outer-form">
-            <form class="reactie-form" method="POST" action="/reacties">
+            <form id="reactieForm" class="reactie-form" method="POST" action="/reacties">
                 <div class="form-name">
                     <label for="name">Naam:</label>
                     <input class="input-name" type="text" id="name" name="name" placeholder="Jouw naam" required>
@@ -29,7 +29,7 @@
                 {% comment %} koppel aan nieuwsbericht {% endcomment %}
                 <input type="hidden" name="story_id" value="{{ story.id }}">
 
-                <button class="form-button" type="submit">Reageer</button>
+                <button id="formButton" class="form-button" type="submit">Reageer</button>
 
             </form>
         </div>
@@ -40,7 +40,7 @@
 
         <h2 class="comments-titel">Reacties</h2>
 
-        <div class="outer-comments">
+        <div id="comments" class="outer-comments">
 
             {% if hasComments == false %}
                 <div class="comments-empty">
