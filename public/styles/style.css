@@ -82,7 +82,8 @@ header{
   }
   button{
     border: none;
-    background: none;
+    background: rgb(36, 36, 36);
+    cursor: pointer;
   }
   img{
     width: 1.2rem;
@@ -891,12 +892,14 @@ details[open]::details-content {
 }
 
 .input-name{
-  border-radius: 0.3rem;
+  font-family: var(--font-main);
+  border-radius: 0.4rem;
   border: 1px solid black;
   border-color: light-dark(black, #E8E8E8);
   padding: 0.4rem;
   @media (min-width: 768px) {
-    width: 15rem;
+    width: 20rem;
+    height: 1.6rem;
   }
   @media (prefers-color-scheme: dark) {
       border-color: white;
@@ -904,13 +907,15 @@ details[open]::details-content {
 }
 
 .input-comment{
-  border-radius: 0.3rem;
+  font-family: var(--font-main);
+  border-radius: 0.4rem;
   border: 1px solid black;
   border-color: light-dark(black, #E8E8E8);
   height: 5rem;
   padding: 0.3rem;
   @media (min-width: 768px) {
-    height: 4rem;
+    height: 10rem;
+    padding: 0.4rem;
   }
   @media (prefers-color-scheme: dark) {
       border-color: white;
@@ -918,9 +923,45 @@ details[open]::details-content {
 }
 
 .form-button{
-  width: 5rem;
-  height: 1.5rem;
+  width: 5.5rem;
+  height: 2.1rem;
   align-self: flex-end;
+  border-radius: 8px;
+  border-color: #7c7e80;
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.form-button.loading{
+  color: transparent;
+  position: relative;
+}
+
+.form-button.loading::after {
+  content: "";
+  width: 30px;
+  aspect-ratio: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  --_g: no-repeat radial-gradient(circle closest-side,#fff 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 100%;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  33%{background-size:calc(100%/3) 0%,calc(100%/3) 100%,calc(100%/3) 100%}
+  50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%,calc(100%/3) 100%}
+  66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%}
+}
+
+.form-button.success{
+  background: rgb(161, 207, 91);
 }
 
 .section-list{
