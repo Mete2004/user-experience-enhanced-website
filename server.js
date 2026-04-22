@@ -45,7 +45,7 @@ async function getCategories() {
 
 //Haalt alle comments op.
 async function getComments() {
-  const res = await fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_stories_comments");
+  const res = await fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_stories_comments?limit=500");
   const data = await res.json();
   return data.data;
 }
@@ -253,12 +253,14 @@ app.post(…, async function (request, response) {
 
 app.post('/reacties', async function (request, response) {
 
+  console.log(request.body);
+
   const name = request.body.name
   const comment = request.body.comment
   const storyId = request.body.story_id
   
   try {
-    await fetch(
+    const apiResponse = await fetch(
       'https://fdnd-agency.directus.app/items/buurtcampuskrant_stories_comments',
       {
         method: 'POST',
@@ -273,12 +275,14 @@ app.post('/reacties', async function (request, response) {
       }
     )
     
+    console.log(apiResponse.status);
+
     response.redirect(303, `/details/${storyId}?success=true`)
 
   } catch (error) {
       response.redirect(303, `/details/${storyId}?error=true`)
   }
-
+ 
 })
 
 
