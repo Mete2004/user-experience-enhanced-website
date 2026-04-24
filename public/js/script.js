@@ -41,51 +41,101 @@
 
 console.log("JS loaded");
 const reactieForm = document.querySelector("#reactieForm")
-const formButton = document.querySelector("#formButton")
-const reacties = document.querySelector("#comments")
 
-reactieForm.addEventListener("submit", async function (event) {
-    console.log("SUBMIT START");
+if (reactieForm) {
+    const formButton = document.querySelector("#formButton")
+    const reacties = document.querySelector("#comments")
 
-    event.preventDefault()
+    reactieForm.addEventListener("submit", async function (event) {
+        console.log("SUBMIT START");
 
-    formButton.classList.add("loading")
+        event.preventDefault()
 
-    let formData = new FormData (reactieForm);
+        formButton.classList.add("loading")
 
-    console.log("FINAL URL:", reactieForm.action);
-    
-    const response = await fetch("/reacties", {
-        method: "POST",
-        body: new URLSearchParams(formData)
-    });
+        let formData = new FormData (reactieForm);
 
-    console.log("FETCH DONE");
-    
-    const responseData = await response.text()
-    console.log(responseData);
+        console.log("FINAL URL:", reactieForm.action);
+        
+        const response = await fetch("/reacties", {
+            method: "POST",
+            body: new URLSearchParams(formData)
+        });
 
-    const parser = new DOMParser ()
-    const responseDOM = parser.parseFromString(responseData, 'text/html')
+        console.log("FETCH DONE");
+        
+        const responseData = await response.text()
+        console.log(responseData);
 
-    const newState = responseDOM.querySelector ('#comments')
-    console.log(newState.innerHTML);
+        const parser = new DOMParser ()
+        const responseDOM = parser.parseFromString(responseData, 'text/html')
 
-    reacties.innerHTML = newState.innerHTML
+        const newState = responseDOM.querySelector ('#comments')
+        console.log(newState.innerHTML);
 
-    reactieForm.reset();
+        reacties.innerHTML = newState.innerHTML
 
-    console.log("Loading state weghalen")
-    formButton.classList.remove("loading")
+        reactieForm.reset();
 
-    formButton.classList.add("success")
-    formButton.textContent = "Geplaatst!"
+        console.log("Loading state weghalen")
+        formButton.classList.remove("loading")
 
-    setTimeout(() => {
-        formButton.classList.remove("success")
-        formButton.textContent = "Reageer"
-    }, 2200);
-})
+        formButton.classList.add("success")
+        formButton.textContent = "Geplaatst!"
+
+        setTimeout(() => {
+            formButton.classList.remove("success")
+            formButton.textContent = "Reageer"
+        }, 2200);
+    })
+}
+
+// FILTER (progressive enhancement)
+const filterLinks = document.querySelectorAll('.filter-link')
+const cardsContainer = document.querySelector('.cards-medium')
+
+if (filterLinks.length && cardsContainer) {
+
+    filterLinks.forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault()
+
+            const url = link.getAttribute('href')
+
+            // Nieuwe content ophalen van server
+            const response = await fetch(url)
+            const html = await response.text()
+
+            // HTML omzetten naar DOM zodat we kunnen selecteren
+            const parser = new DOMParser()
+            const newDOM = parser.parseFromString(html, 'text/html')
+
+            // Alleen de cards vervangen
+            const newCards = newDOM.querySelector('.cards-medium')
+
+            cardsContainer.innerHTML = newCards.innerHTML
+
+            // URL updaten
+            history.pushState(null, '', url)
+        })
+    })
+
+    // back/forward support
+    window.addEventListener('popstate', async () => {
+        const response = await fetch(window.location.href)
+        const html = await response.text()
+
+        const parser = new DOMParser()
+        const newDOM = parser.parseFromString(html, 'text/html')
+
+        const newCards = newDOM.querySelector('.cards-medium')
+
+        cardsContainer.innerHTML = newCards.innerHTML
+
+        // active fix bij back button
+        const currentUrl = window.location.href
+    })
+}
 
 
 // const images = document.querySelectorAll(".text-detail img");
