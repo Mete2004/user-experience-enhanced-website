@@ -3,23 +3,28 @@
 
     <div class="targetgroups">
 
-        <a href="/{{ current_district }}" class="{% if not selectedTargetGroup %}active{% endif %}">
+        <a href="/{{ current_district }}" 
+            class="filter-link {% if not selectedTargetGroup %}active{% endif %}">
             Alle
         </a>
 
-        <a href="/{{ current_district }}?targetgroup=student" class="{% if selectedTargetGroup == 'student' %}active{% endif %}">
+        <a href="/{{ current_district }}?targetgroup=student" 
+            class="filter-link {% if selectedTargetGroup == 'student' %}active{% endif %}">
             Studenten
         </a>
 
-        <a href="/{{ current_district }}?targetgroup=wijkpartner" class="{% if selectedTargetGroup == 'wijkpartner' %}active{% endif %}">
+        <a href="/{{ current_district }}?targetgroup=wijkpartner" 
+            class="filter-link {% if selectedTargetGroup == 'wijkpartner' %}active{% endif %}">
             Wijkpartners
         </a>
 
-        <a href="/{{ current_district }}?targetgroup=wijkbewoner" class="{% if selectedTargetGroup == 'wijkbewoner' %}active{% endif %}">
+        <a href="/{{ current_district }}?targetgroup=wijkbewoner" 
+            class="filter-link {% if selectedTargetGroup == 'wijkbewoner' %}active{% endif %}">
             Wijkbewoners
         </a>
 
-        <a href="/{{ current_district | downcase }}?targetgroup=HvA medewerker" class="{% if selectedTargetGroup == 'HvA medewerker' %}active{% endif %}">
+        <a href="/{{ current_district | downcase }}?targetgroup=HvA medewerker" 
+            class="filter-link {% if selectedTargetGroup == 'HvA medewerker' %}active{% endif %}">
             HvA medewerkers
         </a>
 
