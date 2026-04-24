@@ -82,7 +82,7 @@ header{
   }
   button{
     border: none;
-    background: rgb(36, 36, 36);
+    background: none;
     cursor: pointer;
   }
   img{
