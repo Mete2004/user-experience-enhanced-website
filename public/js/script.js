@@ -102,6 +102,13 @@ if (filterLinks.length && cardsContainer) {
 
             const url = link.getAttribute('href')
 
+            // active state
+            filterLinks.forEach(filterLink => { 
+                filterLink.classList.remove('active')
+            })
+            
+            link.classList.add('active')
+
             // Nieuwe content ophalen van server
             const response = await fetch(url)
             const html = await response.text()
