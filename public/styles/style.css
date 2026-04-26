@@ -830,7 +830,7 @@ details[open]::details-content {
   font-size: var(--text-s);
   img{
     filter: blur(10px);
-    transition: 0.3s;
+    transition: 0.3s ease-out;
     width: 19.7rem;
     height: auto;
     padding: 1rem 0;
@@ -934,6 +934,11 @@ details[open]::details-content {
   border-radius: 8px;
   border-color: #7c7e80;
   margin: 0.5rem 0 0.2rem 0;
+  cursor: pointer;
+}
+
+.form-button:hover{
+  background: #4e4f52;
 }
 
 .form-button.loading{
