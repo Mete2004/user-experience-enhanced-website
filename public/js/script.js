@@ -144,6 +144,18 @@ if (filterLinks.length && cardsContainer) {
     })
 }
 
+const images = document.querySelectorAll(".text-detail img");
+
+images.forEach((imageElement) => {
+  if (imageElement.complete) {
+    imageElement.classList.add("loaded");
+  } else {
+    imageElement.addEventListener("load", () => {
+      imageElement.classList.add("loaded");
+    });
+  }
+});
+
 
 // const images = document.querySelectorAll(".text-detail img");
 
