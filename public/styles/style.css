@@ -829,6 +829,8 @@ details[open]::details-content {
 .text-detail{
   font-size: var(--text-s);
   img{
+    filter: blur(10px);
+    transition: 0.3s;
     width: 19.7rem;
     height: auto;
     padding: 1rem 0;
@@ -837,6 +839,9 @@ details[open]::details-content {
       padding: 2rem 0;
       }
     }
+  img.loaded {
+    filter: blur(0);
+  }  
 }
 
 /* Baseline: Widely Available */
