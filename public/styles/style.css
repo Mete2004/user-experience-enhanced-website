@@ -787,7 +787,7 @@ details[open]::details-content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border: 1px solid rgb(146, 146, 146);
+  border: 1px solid rgb(202, 202, 202);
   @media (min-width: 768px) {
     width: 42rem;
     padding: 2rem 1.5rem 2rem 2rem;
@@ -800,9 +800,9 @@ details[open]::details-content {
 
 .back-link{
   text-decoration: none;
-  color: light-dark(black, #ffffff);
+  color: rgb(255, 123, 0);
   margin-bottom: 10px;
-  font-size: var(--text-sm);
+  font-size: var(--text-s);
   @media (prefers-color-scheme: dark) {
       color: white;
      }
@@ -877,7 +877,7 @@ details[open]::details-content {
 }
 
 .form-titel{
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -1024,7 +1024,7 @@ details[open]::details-content {
 }
 
 .comments-titel{
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -1035,12 +1035,12 @@ details[open]::details-content {
 .comment-outer{
   display: flex;
   flex-direction: row;
-  gap: .3rem;
+  gap: .4rem;
   border: 1px solid rgb(222, 222, 222);
   border-radius: 0.5rem;
-  padding: .5rem .5rem .7rem .5rem;
+  padding: .5rem .5rem .7rem .3rem;
   img{
-    width: 2.3rem;
+    width: 2.6rem;
     height: auto;
     align-self: flex-start;
   }
