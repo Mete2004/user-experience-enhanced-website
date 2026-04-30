@@ -864,7 +864,7 @@ details[open]::details-content {
   }
 }
 
-.titel-div{
+.form-titel-div{
   display: flex;
   flex-direction: row;
   gap: .5rem;

@@ -14,7 +14,7 @@
 
     <section class="section-form">
             <div class="outer-form">
-                <div class="titel-div">
+                <div class="form-titel-div">
                     <img src="/assets/comment-icon.svg">
                     <h2 class="form-titel">Laat een reactie achter!</h2>
                 </div>
@@ -40,10 +40,12 @@
 
     <section class="section-list">
 
-        <h2 class="comments-titel">Reacties</h2>
-
         <div id="comments" class="outer-comments">
-
+            <div class="comments-titel-div">
+                <img src="/assets/comments-icon.svg">
+                <h2 class="comments-titel">Reacties</h2>
+            </div>
+            
             {% if hasComments == false %}
                 <div class="comments-empty">
                     <p class="empty-text">Er zijn nog geen reacties.</p>
