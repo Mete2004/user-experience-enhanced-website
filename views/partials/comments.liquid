@@ -13,26 +13,28 @@
     {% endif %}
 
     <section class="section-form">
-
-        <h2 class="form-titel">Laat een reactie achter!</h2>
-
-        <div class="outer-form">
-            <form id="reactieForm" class="reactie-form" method="POST" action="/reacties">
-                <div class="form-name">
-                    <label for="name">Naam:</label>
-                    <input class="input-name" type="text" id="name" name="name" placeholder="Jouw naam" required>
+            <div class="outer-form">
+                <div class="titel-div">
+                    <img src="/assets/comment-icon.svg">
+                    <h2 class="form-titel">Laat een reactie achter!</h2>
                 </div>
-                <div class="form-comment">
-                    <label for="comment">Bericht:</label>
-                    <textarea class="input-comment" id="message" name="comment" placeholder="Typ hier je reactie..."  required></textarea>
-                </div>
-                {% comment %} koppel aan nieuwsbericht {% endcomment %}
-                <input type="hidden" name="story_id" value="{{ story.id }}">
+                
+                <form id="reactieForm" class="reactie-form" method="POST" action="/reacties">
+                    <div class="form-name">
+                        <label for="name">Naam</label>
+                        <input class="input-name" type="text" id="name" name="name" placeholder="Jouw naam" required>
+                    </div>
+                    <div class="form-comment">
+                        <label for="comment">Bericht</label>
+                        <textarea class="input-comment" id="message" name="comment" placeholder="Typ hier je reactie..."  required></textarea>
+                    </div>
+                    {% comment %} koppel aan nieuwsbericht {% endcomment %}
+                    <input type="hidden" name="story_id" value="{{ story.id }}">
 
-                <button id="formButton" class="form-button" type="submit">Reageer</button>
+                    <button id="formButton" class="form-button" type="submit">Reageer</button>
 
-            </form>
-        </div>
+                </form>
+            </div>
 
     </section>
 

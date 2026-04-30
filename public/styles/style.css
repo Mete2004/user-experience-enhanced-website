@@ -864,14 +864,28 @@ details[open]::details-content {
   }
 }
 
+.titel-div{
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  img{
+    width: 1.8rem;
+    height: auto;
+  }
+}
+
 .form-titel{
-  margin: 0 0 0.5rem 0.2rem;
+  /* margin: 0 0 1rem 0.2rem; */
+  font-size: 1.15rem;
+  text-align: center;
 }
 
 .outer-form{
-  border: 1px solid grey;
-  border-radius: 0.8rem;
-  padding: 1rem;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 1rem;
+  padding: 1.1rem 1rem .5rem 1rem;
   @media (min-width: 768px) {
     width: 25rem;
   }
@@ -888,20 +902,24 @@ details[open]::details-content {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  font-size: var(--text-s);
+  font-weight: 600;
 }
 
 .form-comment{
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  font-size: var(--text-s);
+  font-weight: 600;
 }
 
 .input-name{
   font-family: var(--font-main);
   border-radius: 0.4rem;
-  border: 1px solid black;
-  border-color: light-dark(black, #E8E8E8);
-  padding: 0.4rem;
+  border: 1px solid rgb(194, 194, 194);
+  border-color: light-dark(rgb(195, 195, 195), #E8E8E8);
+  padding: 0.5rem;
   @media (min-width: 768px) {
     width: 20rem;
     height: 1.6rem;
@@ -914,10 +932,10 @@ details[open]::details-content {
 .input-comment{
   font-family: var(--font-main);
   border-radius: 0.4rem;
-  border: 1px solid black;
-  border-color: light-dark(black, #E8E8E8);
+  border: 1px solid rgb(196, 196, 196);
+  border-color: light-dark(rgb(195, 195, 195), #E8E8E8);
   height: 5rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
   @media (min-width: 768px) {
     height: 10rem;
     padding: 0.4rem;
@@ -928,13 +946,15 @@ details[open]::details-content {
 }
 
 .form-button{
-  width: 5.5rem;
-  height: 2.1rem;
+  width: 7.5rem;
+  height: 2.2rem;
   align-self: flex-end;
   border-radius: 8px;
-  border-color: #7c7e80;
-  margin: 0.5rem 0 0.2rem 0;
+  border: 1px solid rgb(255, 128, 0);
+  margin: 0rem 0 0.2rem 0;
   cursor: pointer;
+  color: white;
+  background: rgb(255, 119, 0);
 }
 
 .form-button:hover{
@@ -990,7 +1010,7 @@ details[open]::details-content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border: 1px solid grey;
+  border: 1px solid rgb(202, 202, 202);
   border-radius: 0.8rem;
   padding: 1rem;
 }
