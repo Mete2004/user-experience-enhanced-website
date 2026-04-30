@@ -56,8 +56,8 @@
                 {% for reactie in reacties %}
                 <div class="comment">
                     <p class="comment-name">{{ reactie.name }}</p>
-                    <p class="comment-text">{{ reactie.comment }}</p>
                     <p class="comment-date">{{ reactie.date_created | date:"%d %B %Y" }}</p>
+                    <p class="comment-text">{{ reactie.comment }}</p>
                 </div>
                 {% endfor %}
             {% endif %}

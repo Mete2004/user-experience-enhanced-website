@@ -877,7 +877,6 @@ details[open]::details-content {
 }
 
 .form-titel{
-  /* margin: 0 0 1rem 0.2rem; */
   font-size: 1.15rem;
   text-align: center;
 }
@@ -1002,10 +1001,6 @@ details[open]::details-content {
   }
 }
 
-.comments-titel{
-  margin: 0 0 0.5rem 0.2rem;
-}
-
 .outer-comments{
   display: flex;
   flex-direction: column;
@@ -1015,12 +1010,29 @@ details[open]::details-content {
   padding: 1rem;
 }
 
+.comments-titel-div{
+  display: flex;
+  flex-direction: row;
+  gap: .6rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  img{
+    width: 1.8rem;
+    height: auto;
+  }
+}
+
+.comments-titel{
+  font-size: 1.15rem;
+  text-align: center;
+}
+
 .comment{
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   height: auto;
-  border: 1px solid black;
+  border: 1px solid rgb(202, 202, 202);
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
@@ -1031,17 +1043,22 @@ details[open]::details-content {
   display: inline;
 }
 
-.comment-name::after {
+/* .comment-name::after {
   content: "";
   display: block;
   height: 2px;
-  width: 30%;
+  width: 25%;
   background: rgba(193, 193, 193, 0.3);
   margin-top: 5px;
-}
+} */
 
 .comment-date{
-  font-size: var(--text-s);
+  font-size: var(--text-xs);
+  color: #454545;
+}
+
+.comment-text{
+  margin-top: 0.2rem;
 }
 
 .success-message-outer{
