@@ -20,6 +20,7 @@
   --main-light-blue: #0185a5;
 
   /* text */ /* Baseline: Widely Available */
+  --text-xxs: 12px;
   --text-xs: 13px;
   --text-s: 14px;
   --text-sm: 15px;

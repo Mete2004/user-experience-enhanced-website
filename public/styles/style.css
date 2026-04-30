@@ -957,7 +957,7 @@ details[open]::details-content {
 }
 
 .form-button:hover{
-  background: #4e4f52;
+  background: #ff5e00;
 }
 
 .form-button.loading{
@@ -990,7 +990,7 @@ details[open]::details-content {
 }
 
 .form-button.success{
-  background: rgb(161, 207, 91);
+  background: rgb(255, 119, 0);
 }
 
 .section-list{
@@ -1027,18 +1027,34 @@ details[open]::details-content {
   text-align: center;
 }
 
+.empty-text{
+  color: rgb(39, 39, 39);
+}
+
+.comment-outer{
+  display: flex;
+  flex-direction: row;
+  gap: .6rem;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 0.5rem;
+  padding: .5rem .5rem .7rem .5rem;
+  img{
+    width: 2.2rem;
+    height: auto;
+    align-self: flex-start;
+  }
+}
+
 .comment{
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   height: auto;
-  border: 1px solid rgb(202, 202, 202);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: .3rem 0 0 0;
 }
 
 .comment-name{
-  font-size: 1.1rem;
+  font-size: 17px;
   font-weight: var(--font-weight-semibold);
   display: inline;
 }
@@ -1058,7 +1074,8 @@ details[open]::details-content {
 }
 
 .comment-text{
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
+  font-size: var(--text-sm);
 }
 
 .success-message-outer{
