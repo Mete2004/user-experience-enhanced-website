@@ -954,6 +954,7 @@ details[open]::details-content {
   cursor: pointer;
   color: white;
   background: rgb(255, 119, 0);
+  font-weight: 600;
 }
 
 .form-button:hover{
@@ -1015,7 +1016,7 @@ details[open]::details-content {
   flex-direction: row;
   gap: .6rem;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   img{
     width: 1.8rem;
     height: auto;
@@ -1034,12 +1035,12 @@ details[open]::details-content {
 .comment-outer{
   display: flex;
   flex-direction: row;
-  gap: .6rem;
-  border: 1px solid rgb(202, 202, 202);
+  gap: .3rem;
+  border: 1px solid rgb(222, 222, 222);
   border-radius: 0.5rem;
   padding: .5rem .5rem .7rem .5rem;
   img{
-    width: 2.2rem;
+    width: 2.3rem;
     height: auto;
     align-self: flex-start;
   }
@@ -1069,7 +1070,7 @@ details[open]::details-content {
 } */
 
 .comment-date{
-  font-size: var(--text-xs);
+  font-size: var(--text-xxs);
   color: #454545;
 }
 
