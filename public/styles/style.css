@@ -507,12 +507,16 @@ details[open]::details-content {
   display: inline-block;
   width: 5.5rem;
   height: 1.8rem;
-  background-color: #e1e1e1;
+  background-color: #FEF4ED;
   text-align: center;
   place-content: center;
   border-radius: 1rem;
-  color: rgb(62, 62, 62);
+  color: #E96C25;
   font-size: var(--text-s);
+}
+
+.label-detail{
+  margin: 0 0 0 .5rem;
 }
 
 
@@ -662,11 +666,11 @@ details[open]::details-content {
   display: inline-block;
   width: 5rem;
   height: 1.6rem;
-  background-color: #e1e1e1;
+  background-color: #FEF4ED;
   text-align: center;
   place-content: center;
   border-radius: 1rem;
-  color: rgb(62, 62, 62);
+  color: #E96C25;
   font-size: var(--text-s);
 }
 
@@ -790,12 +794,12 @@ details[open]::details-content {
   padding: 1.2rem 1.2rem 1rem 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   border: 1px solid rgb(202, 202, 202);
   @media (min-width: 768px) {
     width: 42rem;
     padding: 2rem 1.5rem 2rem 2rem;
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
   @media (prefers-color-scheme: dark) {
       color: white;
@@ -825,11 +829,11 @@ details[open]::details-content {
 .div-date{
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.3rem;
   place-items: center;
-  padding: 0.5rem 0 0.5rem 0.2rem;
+  /* padding: 0.5rem 0 0.5rem 0; */
   img{
-    width: 1.7rem;
+    width: 1.6rem;
     height: auto;
   }
 }
@@ -841,10 +845,10 @@ details[open]::details-content {
     transition: 0.3s ease-out;
     width: 19.7rem;
     height: auto;
-    padding: 1rem 0;
+    padding: .5rem 0;
     @media (min-width: 768px) {
       width: 40rem;
-      padding: 2rem 0;
+      padding: 1rem 0;
       }
     }
   img.loaded {
