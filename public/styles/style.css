@@ -469,7 +469,7 @@ details[open]::details-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.5rem 0 0.5rem 0.8rem ;
+  padding: 0.3rem 0 0.5rem 0.8rem ;
   color: light-dark(rgb(49, 49, 49), #ffffff);
   @media (prefers-color-scheme: dark) {
       color: white;
@@ -479,7 +479,11 @@ details[open]::details-content {
 .meta-left{
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.2rem;
+    img{
+    width: 1.5rem;
+    height: auto;
+  }
 }
 
 .card-date{
