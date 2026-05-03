@@ -1,7 +1,9 @@
 <div class="card-medium">
 
     <div class="card-medium-outer-img">
-        <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}">
+        <object data="https://fdnd-agency.directus.app/assets/{{ story.cover }}" type="image/jpg">
+            <img src="/assets/image-icon.svg" alt="fallback">
+        </object>
     </div>
     
     <div class="card-medium-content">
