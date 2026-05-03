@@ -469,7 +469,7 @@ details[open]::details-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.3rem 0 0.5rem 0.8rem ;
+  padding: 0.3rem 0 0.7rem 0.8rem ;
   color: light-dark(rgb(49, 49, 49), #ffffff);
   @media (prefers-color-scheme: dark) {
       color: white;
@@ -562,6 +562,10 @@ details[open]::details-content {
   h3{
     font-size: var(--intro-medium-text);
     font-weight: var(--intro-weight);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   h2 {
     font-size: var(--titel-small);
@@ -1143,7 +1147,7 @@ footer{
   background: var(--bg-main);
   background: linear-gradient(white, #ebeaea); /* enhancement */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  border-top: 1px solid rgb(195, 195, 195);
+  border-top: 1px solid rgb(225, 225, 225);
   background: light-dark(#ffffff, black);
   @media (prefers-color-scheme: dark) {
       background: black;
