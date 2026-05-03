@@ -12,10 +12,12 @@
         {% comment %} <p>{{ story.district }}</p> {% endcomment %}
 
         <div class="card-medium-meta">
-            <p class="card-date">{{ story.date | date: "%d-%m-%Y"}}</p>
-            
+            <div class="card-medium-date">
+                <img src="/assets/calendar-icon.svg">
+                <p class="card-date">{{ story.date | date: "%d-%m-%Y"}}</p>
+            </div>
             <a href="/details/{{ story.id }}" class="card-medium-button read-more-button">
-                Lees meer 
+                    Lees meer 
             </a>
         </div>
     </div>

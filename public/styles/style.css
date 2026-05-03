@@ -568,7 +568,7 @@ details[open]::details-content {
   }
   p {
     margin: 0.25rem 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -576,6 +576,15 @@ details[open]::details-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  img{
+    width: 1.5rem;
+    height: auto;
+  }
+}
+
+.card-medium-date{
+  display: flex;
+  flex-direction: row;
 }
 
 .card-medium-button{
@@ -605,6 +614,8 @@ details[open]::details-content {
 }
 
 .card-small-outer-img{
+    max-width: 125px;
+    height: 6.7rem;
    img{
     width: 7.5rem;
     height: 6.7rem;
@@ -657,7 +668,11 @@ details[open]::details-content {
 .meta-left-small{
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.1rem;
+  img{
+    width: 1.3rem;
+    height: auto;
+  }
 }
 
 .card-date-small{
@@ -678,12 +693,6 @@ details[open]::details-content {
   font-size: var(--text-s);
 }
 
-.card-small-button{
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  margin-top: 2px;
-}
-
 /* Baseline: Widely Available */
 /* component: read-more button */
 .read-more-button{
@@ -693,6 +702,13 @@ details[open]::details-content {
   @media (prefers-color-scheme: dark) {
       color: white;
      }
+}
+
+.card-small-button{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin-top: 2px;
+  font-size: var(--text-xs);
 }
 
 .read-more-button:after{
