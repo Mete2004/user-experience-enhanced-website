@@ -1259,7 +1259,9 @@ footer{
 }
 
 .logo-footer img{
+  max-width: 7rem;
   @media (min-width: 768px) {
+    max-width: none;
     width: 17rem;
   }
 }
@@ -1269,7 +1271,7 @@ footer{
   flex-direction: row;
   gap: 1.5rem;
   h4{
-    margin: 0 0 0.5rem -0.1rem;
+    margin: 0 0 0.3rem -0.1rem;
     font-size: 1rem;
   }
   @media (min-width: 768px) {
