@@ -684,8 +684,10 @@ details[open]::details-content {
   @media (min-width: 768px) {
     max-width: 8.5rem;
     img{ 
-      width: 8rem;
-      height: 7rem;
+      display: block;
+      object-fit: cover;
+      width: 7.5rem;
+      height: 6.7rem;
     }
   }
 }
