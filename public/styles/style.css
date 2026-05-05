@@ -251,7 +251,7 @@ details[open]::details-content {
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    gap: 5.5rem;
+    gap: 5rem;
     span{
       color: black;
       font-weight: 600;
