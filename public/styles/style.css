@@ -40,19 +40,19 @@ header{
 
 .nieuw-west .logo-header img{
   @media (min-width: 768px)  {
-    width: 26rem;
+    width: 24rem;
   }
 }
 
 .zuidoost .logo-header img{
   @media (min-width: 768px) {
-    width: 25rem;
+    width: 23rem;
   }
 }
 
 .oost .logo-header img{
   @media (min-width: 768px) {
-    width: 22rem;
+    width: 20rem;
   }
 }
 
@@ -60,7 +60,7 @@ header{
   width: 7rem;
   height: auto;
   @media (min-width: 768px) {
-    width: 18rem;
+    width: 16rem;
   }
 }
 
@@ -815,7 +815,7 @@ details[open]::details-content {
 .section-cards {
   padding: 0.3rem 0;
   @media (min-width: 768px) {
-    padding: 2rem 0rem;
+    padding: 1.5rem 2rem;
   }
 }
 
@@ -1262,7 +1262,25 @@ footer{
   max-width: 7rem;
   @media (min-width: 768px) {
     max-width: none;
-    width: 17rem;
+    width: 18rem;
+  }
+}
+
+.nieuw-west .logo-footer img{
+  @media (min-width: 768px) {
+    width: 22rem;
+  }
+}
+
+.zuidoost .logo-footer img{
+  @media (min-width: 768px) {
+    width: 22rem;
+  }
+}
+
+.oost .logo-footer img{
+  @media (min-width: 768px) {
+    width: 22rem;
   }
 }
 
