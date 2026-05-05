@@ -30,7 +30,7 @@ header{
     border-bottom: 1px solid rgb(195, 195, 195);
     place-items: center;
     @media (min-width: 768px) {
-      padding: 0rem 2rem;
+      padding: 0 4rem 0 2rem;
     }
     @media (prefers-color-scheme: dark) {
       background: black;
@@ -250,7 +250,13 @@ details[open]::details-content {
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 4rem;
+    height: 100px;
+    span{
+      color: black;
+      font-weight: 600;
+      font-size: var(--titel-small);
+    }
     a{
         text-decoration: none;
         text-align: center;
@@ -320,12 +326,12 @@ details[open]::details-content {
   color: white;
 }
 
-.filter-info{
+/* .filter-info{
   font-size: var(--text-m);
   font-weight:lighter;
   font-style: oblique;
   padding: 1.5rem 0 0.5rem 0.5rem;
-}
+} */
 
 /* Baseline: Widely Available */
 /* index.liquid */
@@ -340,6 +346,7 @@ details[open]::details-content {
   padding: 0.8rem 0 2rem 0.5rem;
   h3{
     font-style: italic;
+    color: #3c3c3c;
   }
   @media (min-width: 768px) {
     padding: 0 1rem 1.5rem 2rem;
@@ -364,7 +371,7 @@ details[open]::details-content {
 
 .card-algemeen-big{
   @media (min-width: 768px) {
-    padding: 0.5rem 0 0 1rem;
+    padding: 0.7rem 0 0 1rem;
   }
 }
 
@@ -487,7 +494,7 @@ details[open]::details-content {
 }
 
 .card-date{
-  width: 5.1rem;
+  width: 4.5rem;
   place-content: center;
   font-size: var(--text-s);
 }
@@ -588,8 +595,12 @@ details[open]::details-content {
 
 .card-medium-meta{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  a{
+    text-align: right;
+    padding: 0.8rem 0 0 0;
+  }
   img{
     width: 1.5rem;
     height: auto;
@@ -599,6 +610,18 @@ details[open]::details-content {
 .card-medium-date{
   display: flex;
   flex-direction: row;
+}
+
+.label-district-medium{
+  display: inline-block;
+  width: 5rem;
+  height: 1.6rem;
+  background-color: #FEF4ED;
+  text-align: center;
+  place-content: center;
+  border-radius: 1rem;
+  color: #E96C25;
+  font-size: var(--text-s);
 }
 
 .card-medium-button{
@@ -716,16 +739,15 @@ details[open]::details-content {
   color: light-dark(rgb(49, 49, 49), #ffffff);
   font-size: var(--text-s);
   place-content: center;
+  transition: transform 0.3s ease;
   @media (prefers-color-scheme: dark) {
       color: white;
      }
 }
 
-.card-small-button{
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  margin-top: 2px;
-  font-size: var(--text-xs);
+.read-more-button:hover{
+  color: black;
+  transform: scale(1.01);
 }
 
 .read-more-button:after{
@@ -737,7 +759,14 @@ details[open]::details-content {
 /* Baseline: Widely Available */
 /* enhancement */
 .read-more-button:hover::after {
-  transform: translateX(4px);
+  transform: translateX(3px);
+}
+
+.card-small-button{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin-top: 2px;
+  font-size: var(--text-xs);
 }
 
 /* Baseline: Widely Available */
@@ -1211,7 +1240,6 @@ footer{
 }
 
 .logo-footer img{
-  max-width: 7rem;
   @media (min-width: 768px) {
     width: 17rem;
   }

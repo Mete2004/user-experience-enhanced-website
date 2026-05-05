@@ -17,6 +17,7 @@
             <div class="card-medium-date">
                 <img src="/assets/calendar-icon.svg">
                 <p class="card-date">{{ story.date | date: "%d-%m-%Y"}}</p>
+                <p class="label-district-medium">{{ story.district }}</p>
             </div>
             <a href="/details/{{ story.id }}" class="card-medium-button read-more-button">
                     Lees meer 
