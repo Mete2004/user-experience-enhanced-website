@@ -285,7 +285,7 @@ details[open]::details-content {
 
 .desktop-nav a:hover::after,
 .desktop-nav a.nav-active::after {
-  width: 74px;
+  width: 78px;
 }
 
 /* Baseline: Widely Available */
