@@ -291,7 +291,7 @@ details[open]::details-content {
 /* Baseline: Widely Available */
 /* targetgroups.liquid */
 .section-targets{
-  border-bottom: 1px solid #eeeded;
+  
   padding: 0.5rem 0.5rem 1.5rem 0.7rem;
 }
 
@@ -563,8 +563,10 @@ details[open]::details-content {
   @media (min-width: 768px) {
     border-bottom: 1px solid #c3c3c3;
     border-left: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+    border-top: 1px solid #eeeeee;
     border-radius: 0.5rem;
-    padding: 0.5rem 0.5rem 0.2rem 0.5rem
+    padding: 1rem .5rem .2rem .8rem
   }
   @media (prefers-color-scheme: dark) {
       color: black;
@@ -606,8 +608,15 @@ details[open]::details-content {
     font-size: 0.8rem;
   }
   @media (min-width: 768px) {
+    padding: 0 0 0.9rem 0.4rem;
+    width: 400px;
+    height: 195px;
     h2{
-      font-size: var(--titel-small);
+      font-size: var(--titel-sm);
+      min-height: 85px;
+    }
+    h3{
+      min-height: 36px;
     }
   }
 }
@@ -675,6 +684,8 @@ details[open]::details-content {
     width: 7.5rem;
     height: 6.7rem;
     border-radius: 0.5rem;
+    display: block;
+    object-fit: cover;
   }
   object{
     width: 7.5rem;
@@ -683,12 +694,6 @@ details[open]::details-content {
   }
   @media (min-width: 768px) {
     max-width: 8.5rem;
-    img{ 
-      display: block;
-      object-fit: cover;
-      width: 7.5rem;
-      height: 6.7rem;
-    }
   }
 }
 
