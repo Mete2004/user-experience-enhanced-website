@@ -40,16 +40,16 @@
         </details>
 
         <nav class="desktop-nav">
-             <a href="/" class="link-button">
+             <a href="/" class="link-button {% if currentPath == '/' %}nav-active{% endif %}">
                  <span>HOME</span>
             </a>
-            <a href="nieuw-west" class="link-button">
+            <a href="/nieuw-west" class="link-button {% if currentPath == '/nieuw-west' %}nav-active{% endif %}">
                 <span>NIEUW-WEST</span>
             </a>
-            <a href="zuidoost" class="link-button">
+            <a href="/zuidoost" class="link-button {% if currentPath == '/zuidoost' %}nav-active{% endif %}">
                 <span>ZUIDOOST</span>
             </a>
-            <a href="oost" class="link-button">
+            <a href="/oost" class="link-button {% if currentPath == '/oost' %}nav-active{% endif %}">
                 <span>OOST</span>
             </a>
         </nav>
