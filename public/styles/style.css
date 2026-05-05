@@ -31,6 +31,7 @@ header{
     place-items: center;
     @media (min-width: 768px) {
       padding: 0 4rem 0 2rem;
+      height: 110px;
     }
     @media (prefers-color-scheme: dark) {
       background: black;
@@ -250,8 +251,7 @@ details[open]::details-content {
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    gap: 4rem;
-    height: 100px;
+    gap: 5.5rem;
     span{
       color: black;
       font-weight: 600;
@@ -261,12 +261,31 @@ details[open]::details-content {
         text-decoration: none;
         text-align: center;
         place-content: center;
+        position: relative;
         img{
           width: 7.5rem;
           height: auto;
         }
     }
   }
+}
+
+.desktop-nav a::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  width: 0;
+  height: 4px;
+  border-radius: 3px;
+  background: var(--main-orange);
+  transition: width 0.40s ease;
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a.nav-active::after {
+  width: 74px;
 }
 
 /* Baseline: Widely Available */
