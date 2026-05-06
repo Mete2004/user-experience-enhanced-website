@@ -3,7 +3,15 @@
   <div class="card-big-first">
     <div class="card-big-outer-img">
       <div class="card-big-badge">Laatste nieuws</div>
-      <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}">
+      {% if story.cover %}
+        <picture>
+            <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ story.cover }}">
+            <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ story.cover }}">
+            <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}" height="375" width="550">
+        </picture>
+      {% else %}
+        <img src="/assets/image-icon.svg" class="image-icon" alt="Geen afbeelding">
+      {% endif %}
     </div>
   </div>
   
