@@ -291,8 +291,10 @@ details[open]::details-content {
 /* Baseline: Widely Available */
 /* targetgroups.liquid */
 .section-targets{
-  
   padding: 0.5rem 0.5rem 1.5rem 0.7rem;
+  @media (min-width: 768px) {
+    padding: 0.8rem 0.5rem .5rem 2rem;
+  }
 }
 
 .targetgroups {
@@ -620,7 +622,7 @@ details[open]::details-content {
     font-size: 0.8rem;
   }
   @media (min-width: 768px) {
-    padding: 0 0 0.9rem 0.4rem;
+    padding: 0 0 0 0.4rem;
     width: 400px;
     height: 195px;
     h2{
@@ -649,6 +651,11 @@ details[open]::details-content {
   img{
     width: 1.5rem;
     height: auto;
+  }
+  @media (min-width: 768px) {
+    a{
+      padding: 0rem 0 0 0;
+  }
   }
 }
 
