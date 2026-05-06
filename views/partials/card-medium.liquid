@@ -1,9 +1,16 @@
 <div class="card-medium">
 
+    
     <div class="card-medium-outer-img">
-        <object data="https://fdnd-agency.directus.app/assets/{{ story.cover }}" type="image/jpg">
-            <img src="/assets/image-icon.svg" alt="fallback">
-        </object>
+    {% if story.cover %}
+        <picture>
+            <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ story.cover }}">
+            <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ story.cover }}">
+            <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="cover-afbeelding" height="130" width="130">
+        </picture>
+    {% else %}
+        <img src="/assets/image-icon.svg" class="image-icon" alt="Geen afbeelding">
+    {% endif %}
     </div>
     
     <div class="card-medium-content">

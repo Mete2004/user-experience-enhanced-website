@@ -586,6 +586,12 @@ details[open]::details-content {
   }
 }
 
+.image-icon{
+    width: 8.5rem;
+    height: 8.7rem;
+    border-radius: 0.5rem;
+}
+
 .card-medium-content{
   display: flex;
   flex-direction: column;
@@ -599,9 +605,15 @@ details[open]::details-content {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    min-height: 36px;
   }
   h2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: var(--titel-xs);
+    min-height: 45px;
   }
   p {
     margin: 0.25rem 0;

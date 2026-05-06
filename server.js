@@ -33,6 +33,8 @@ app.engine('liquid', engine.express())
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
 
+const baseURL = 'https://fdnd-agency.directus.app/items/buurtcampuskrant_'
+
 //Haalt alle stories op.
 async function getStories() {
   //haalt data op 
