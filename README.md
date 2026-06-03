@@ -59,6 +59,7 @@ https://github.com/user-attachments/assets/c10584b2-e5f9-4788-b9cf-f715d07c7866
 ### Loading state
 
 Tijdens het plaatsen van een reactie wordt een loading animatie weergegeven met drie bewegende bolletjes. Hierdoor ziet de gebruiker dat de reactie nog wordt verwerkt.
+
 <img width="165" height="62" alt="image" src="https://github.com/user-attachments/assets/77680566-a566-40ad-a612-29712adc7ced" />
 
 ### Success state
