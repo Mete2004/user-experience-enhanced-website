@@ -31,7 +31,7 @@ header{
     place-items: center;
     @media (min-width: 768px) {
       padding: 0 4rem 0 2rem;
-      height: 110px;
+      height: 90px;
     }
     @media (prefers-color-scheme: dark) {
       background: black;
