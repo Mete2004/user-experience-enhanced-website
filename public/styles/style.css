@@ -256,6 +256,10 @@ details[open]::details-content {
       color: black;
       font-weight: 600;
       font-size: var(--titel-small);
+      color: light-dark(black, #ffffff);
+      @media (prefers-color-scheme: dark) {
+        color: white;
+      }
     }
     a{
         text-decoration: none;
